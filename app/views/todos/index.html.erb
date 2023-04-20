@@ -5,6 +5,10 @@
   <%= render "form", todo: Todo.new %>
 
   <div id="todos" class="tasks">
-    <%= render @todos %>
+  <% if !@todos.empty? %>
+    <%= render @todos %> 
+  <% else %>
+    <p class="empty_task">You havn't task to complete</p>
+  <% end %>
   </div>
 </main>
