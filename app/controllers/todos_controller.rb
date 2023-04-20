@@ -3,7 +3,7 @@ class TodosController < ApplicationController
 
   # GET /todos or /todos.json
   def index
-    @todos = Todo.all.reverse
+    @todos = Todo.order("updated_at").reverse
   end
 
   # GET /todos/1 or /todos/1.json
@@ -29,7 +29,7 @@ class TodosController < ApplicationController
         format.html { redirect_to todo_url(@todo), notice: "Todo was successfully created." }
         format.json { render :show, status: :created, location: @todo }
       else
-        format.html { redirect_to '/todos', status: :unprocessable_entity }
+        format.html { redirect_to '/todos', notice: "Title can't be blank" }
         format.json { render json: @todo.errors, status: :unprocessable_entity }
       end
     end

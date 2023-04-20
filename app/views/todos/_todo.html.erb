@@ -1,9 +1,19 @@
-<p>
-    <a href="/todos/<%= todo.id %>>/edit"><%= todo.title %></a>    
-</p>
 
-  <p>
-    <%= todo.description %>
-  </p>
+<div id="<%= "#{dom_id(todo)}_container" %>" class="task">   
+
+  <div class="task-checkbox">
+        <% if todo.complete? %>
+            <input checked type="checkbox" id="task1-title" name="task-title">
+        <% else %>
+            <input type="checkbox" id="task1-title" name="task-title">       
+        <% end %>
+    </div>
+
+    <div class="task-content">
+        <a href="/todos/<%= todo.id %>/edit">
+          <label style="cursor: pointer" for="task3-title"><%= todo.title %></label>
+          <p><%= todo.created_at %></p>
+        </a>
+    </div>
 
 </div>

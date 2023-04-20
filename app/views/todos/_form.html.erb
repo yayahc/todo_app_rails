@@ -9,17 +9,12 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
-  </div>
+  <div class="adding-task">
+    <%= form.text_area :title, class: "task-title", placeholder:"Task name here",  cols:"30", rows:"2"%>
+    <%= form.text_area :description, class: "task-edit", placeholder:"Description", cols:"30", rows:"6"  %>
 
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
+    <div class="button-add-task">
+      <input name="commit" type="submit" value="Add task" />
+    </div>
+</div>
 <% end %>
