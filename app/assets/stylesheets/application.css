@@ -179,7 +179,7 @@
  }
  
  
- .task, turbo-frame{
+ .task{
      display: flex;
      flex-direction: row;
      gap: 1vw;

@@ -29,6 +29,7 @@ class TodosController < ApplicationController
         format.html { redirect_to todo_url(@todo), notice: "Todo was successfully created." }
         format.json { render :show, status: :created, location: @todo }
       else
+        # format.turbo_stream { render turbo_stream: turbo_stream.replace("#{helpers.dom_id(@todo)}_form", partial: "form", locals: { todo: @todo }) }
         format.html { redirect_to '/todos', notice: "Title can't be blank" }
         format.json { render json: @todo.errors, status: :unprocessable_entity }
       end
@@ -39,6 +40,7 @@ class TodosController < ApplicationController
   def update
     respond_to do |format|
       if @todo.update(todo_params)
+        # format.turbo_stream
         format.html { redirect_to '/todos', notice: "Todo was successfully updated." }
         format.json { render :show, status: :ok, location: @todo }
       else

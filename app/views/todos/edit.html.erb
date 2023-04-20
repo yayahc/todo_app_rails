@@ -1,3 +1,9 @@
+<% flash.each do |type, msg| %>
+  <div>
+    <%= msg %>
+  </div>
+<% end %>
+
 <%= form_with(model: @todo, id: "#{dom_id(@todo)}_form") do |form| %>
 
   <div class="adding-task">

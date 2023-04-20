@@ -1,13 +1,16 @@
 
 <div id="<%= "#{dom_id(todo)}_container" %>" class="task">   
 
+
+ <%= turbo_frame_tag dom_id(todo) do %>
   <div class="task-checkbox">
         <% if todo.complete? %>
-            <input checked type="checkbox" id="task1-title" name="task-title">
+            <%= button_to todo_path(todo, todo: { status: 'incomplete' }),class: "checked", method: :patch do %><% end %>
         <% else %>
-            <input type="checkbox" id="task1-title" name="task-title">       
+            <%= button_to todo_path(todo, todo: { status: 'complete' }),class: "no_checked", method: :patch do %><% end %>
         <% end %>
     </div>
+<% end %>
 
     <div class="task-content">
         <a href="/todos/<%= todo.id %>/edit">

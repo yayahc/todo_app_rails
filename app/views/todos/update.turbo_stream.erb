@@ -1,0 +1,4 @@
+<%= turbo_stream.replace "#{dom_id(@todo)}_container" do %>
+    <p><%= notice %></p>
+    <%= render "todo", todo: @todo %>
+<% end %>
