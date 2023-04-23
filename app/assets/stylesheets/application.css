@@ -38,18 +38,27 @@
      color: black;
  }
  
- trix-editor {
+ 
+ 
+ /* trix */
+ 
+trix-editor {
     border: 1px solid #bbb;
     border-radius: 3px;
     margin: 0;
-    min-width: 650px;
-    max-width: 800px;
+    width: 100%;
     min-height: 5em;
     outline: none;
 }
+trix-toolbar {
+    display: flex;
+    white-space: normal;
+    text-align: left;
+}
 
-
-/* trix */
+.trix-content {
+    min-height: 20vh;
+}
 
 .trix-content .attachment-gallery > action-text-attachment,
 .trix-content .attachment-gallery > .attachment {

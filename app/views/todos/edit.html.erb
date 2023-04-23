@@ -1,20 +1,22 @@
-<% flash.each do |type, msg| %>
-  <div>
-    <%= msg %>
-  </div>
-<% end %>
+<main>
+    <% flash.each do |type, msg| %>
+    <div>
+        <%= msg %>
+    </div>
+    <% end %>
 
-<%= form_with(model: @todo, id: "#{dom_id(@todo)}_form") do |form| %>
+    <%= form_with(model: @todo, id: "#{dom_id(@todo)}_form") do |form| %>
 
-    <div class="adding-task">
-        <%= form.text_area :title, class: "task-title", placeholder:"Task name here",  cols:"30", rows:"2"%>
-        <%= form.rich_text_area :description, placeholder:"Description"  %>
+        <div class="adding-task">
+            <%= form.text_area :title, class: "task-title", placeholder:"Task name here",  cols:"30", rows:"2"%>
+            <%= form.rich_text_area :description, placeholder:"Description"  %>
 
-       <div class="buttons">
-            <a href="/todos"><button type="button" class="button-back"><img <%= image_tag("icons/left-arrow-blue.png") %></button></a>
-            <input name="commit" type="submit" value="Update task" />
-            <% end %>
+        <div class="buttons">
+                <a href="/todos"><button type="button" class="button-back"><img <%= image_tag("icons/left-arrow-blue.png") %></button></a>
+                <input name="commit" type="submit" value="Update task" />
+                <% end %>
 
-            <%= button_to 'Delete task', todo_path(@todo), method: :delete, class:"button-delete-task" %>  
-        </div>
-</div>
+                <%= button_to 'Delete task', todo_path(@todo), method: :delete, class:"button-delete-task" %>  
+            </div>
+    </div>
+</main>
