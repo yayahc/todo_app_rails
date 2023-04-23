@@ -1,0 +1,150 @@
+:root{
+    --main-color:  #c3c7d1;
+    --secondary-color: #ffff;
+    --buttons-color: #672EE3;
+}
+@font-face {
+    font-family: Poppins;
+    src: url(Fonts/Poppins/Poppins-Regular.ttf);
+}
+
+
+div{
+    background-color: var(--secondary-color);
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+main{
+    width: 100%;
+    overflow-x: hidden;
+    background-color: var(--main-color) ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+}
+::-webkit-scrollbar{
+    width: 0;
+    background: transparent;
+}
+
+header{
+    width: 100vw;
+    height: 10vh;
+    background-color: var(--secondary-color);
+    text-align: center;
+    position: fixed;
+}
+h1{
+    font-size: 3.5vh;
+    font-family: Poppins;
+    font-weight: 600;
+}
+
+footer{
+    width: 100vw;
+    height: 44px;
+    background-color: var(--secondary-color);
+    text-align: center;
+    font-size: 9px;
+    bottom: 0;
+}
+h2{
+    font-family: Poppins;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.adding-task{
+    width: 60vw;
+    height: 70vh;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh;
+    margin-top: 15vh;
+    
+}
+
+textarea{
+    width: 99%;
+    border: none;
+    outline: none;
+    resize: none;
+    padding: 2px;
+    padding-left: 1vw;
+    font-family: Poppins;
+    font-size: 14px;
+    
+}
+::placeholder{
+    color: #D5D3DF;
+    font-weight: 400;
+}
+
+.task-title{
+    padding-top: 2vh;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    border-bottom: 2px solid rgb(213, 211, 223, 0.5);
+    
+}
+
+.task-edit{
+    padding-top: 2Vh;
+    height: 100%;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;;
+}
+
+.buttons{
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    gap: 1vw;
+
+}
+
+.button-add-task{
+    width: 10vw;
+    height: 6vh;
+    border-radius: 3px;
+    background-color: var(--buttons-color);
+    font-family: Poppins;
+    font-size: 2vh;
+    color: white;
+    border: none;
+}
+.button-delete-task{
+    width: 10vw;
+    height: 6vh;
+    border-radius: 3px;
+    background-color: var(--secondary-color);
+    font-family: Poppins;
+    font-size: 2vh;
+    color: #E32E44;
+    border: solid #E32E44; 
+}
+.button-back{
+    width: 4vw;
+    height: 6vh;
+    border-radius: 3px;
+    background-color: var(--secondary-color);
+    font-family: Poppins;
+    font-size: 2vh;
+    color: var(--buttons-color);
+    border: solid var(--buttons-color);
+}
+
+ button:active, input[type="button"]:active{
+    transform: scale(0.95);
+}
+
+img{
+    width: 70%;
+}
