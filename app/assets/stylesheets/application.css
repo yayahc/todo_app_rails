@@ -142,7 +142,7 @@ trix-toolbar {
      padding: 20px;
      display: flex;
      flex-direction: column;
-     align-items: center;
+     align-items: start;
      gap: 1vh;
      margin-top: 15vh;
      
@@ -168,8 +168,7 @@ trix-toolbar {
      padding-top: 2vh;
      border-top-right-radius: 3px;
      border-top-left-radius: 3px;
-     border-bottom: 2px solid rgb(213, 211, 223, 0.5);
-     
+     border-bottom: 2px solid rgb(213, 211, 223, 0.5);     
  }
  
  .task-edit{
@@ -179,7 +178,6 @@ trix-toolbar {
  }
  
  .button-add-task{
-     width: 100%;
      display: flex;
      align-items: flex-start;
  }
