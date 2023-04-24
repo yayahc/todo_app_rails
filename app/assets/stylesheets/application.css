@@ -168,7 +168,7 @@ trix-toolbar {
      padding-top: 2vh;
      border-top-right-radius: 3px;
      border-top-left-radius: 3px;
-     border-bottom: 2px solid rgb(213, 211, 223, 0.5);     
+     /* border-bottom: 2px solid rgb(213, 211, 223, 0.5);    */
  }
  
  .task-edit{
