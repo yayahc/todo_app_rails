@@ -1,4 +1,4 @@
- <% flash.each do |type, msg| %>
+<% flash.each do |type, msg| %>
     <div>
         <%= msg %>
     </div>
@@ -10,10 +10,10 @@
     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
     <label for="email">Email</label>
-    <input type="email" name="user[email]"  id="email" value="<%= @user.email %>">
+    <input required type="email" name="user[email]"  id="email">
 
     <label for="email">Password</label>
-    <input type="password" name="user[password]"  id="password">
+    <input required type="password" name="user[password]"  id="password">
 
     <input type="submit" value="Sign in">
     <%= link_to "Register", register_path %>
