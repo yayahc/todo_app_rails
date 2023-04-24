@@ -12,13 +12,15 @@ class SessionsController < ApplicationController
         session[:user_id] = @user.id
         redirect_to todos_path
     else
-        flash.now[:notice] = "Bad Email or Password"
+        flash.now[:notice] = "invalid Email or Password"
         render :new
     end
   end
 
   def destroy
-    
+    current_user.destroy
+    session.destroy
+    redirect_to '/sign_in'
   end
 
   private
