@@ -1,0 +1,18 @@
+databases:
+  - name: magic_todo_database
+    databaseName: magic_todo
+    user: yayahc
+
+services:
+  - type: web
+    name: magic_todo
+    env: ruby
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: mysite
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
