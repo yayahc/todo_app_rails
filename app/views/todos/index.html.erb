@@ -1,5 +1,6 @@
  <% if current_user %>
       Hi <%= current_user.email %>
+      <%= link_to "Sign out", sign_out_path %>
 <% end %>
 
 <main class="main-todo">

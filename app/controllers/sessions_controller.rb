@@ -18,9 +18,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    current_user.destroy
-    session.destroy
-    redirect_to '/sign_in'
+    session[:user_id] = nil
+    redirect_to sign_in_path
   end
 
   private
