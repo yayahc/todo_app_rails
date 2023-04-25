@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'todo_items/new'
   get 'sessions/new'
   get 'users/new'
   get 'users/create'
