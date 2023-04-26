@@ -1,5 +1,6 @@
 class Todo < ApplicationRecord
     belongs_to :user
+    has_many :todo_items
 
     validates_presence_of :title
 
