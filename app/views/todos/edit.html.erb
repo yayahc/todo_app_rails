@@ -9,6 +9,13 @@
 
         <div class="adding-task">
             <%= form.text_area :title, class: "task-title", placeholder:"Task name here",  cols:"30", rows:"2"%>
+            <div>
+                <br></br>
+                    <%= render @todo.todo_items %>                    
+                    <%= render "todo_items/form" %>                    
+                <br></br>
+                <br></br>
+            </div>
             <%= form.rich_text_area :description, placeholder:"Description"  %>
 
         <div class="buttons">

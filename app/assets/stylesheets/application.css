@@ -29,6 +29,10 @@
      /* align-items: center; */
  }
  
+.borderPresence {
+    border: 1px solid red;
+}
+ 
  i {
      user-select: none;
  }

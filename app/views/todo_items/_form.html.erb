@@ -1,0 +1,5 @@
+<%= form_with(model: @todo_item) do |form|  %>
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <%= form.text_area :content, class: "borderPresence" %>
+    <%= form.submit %>
+<% end %>

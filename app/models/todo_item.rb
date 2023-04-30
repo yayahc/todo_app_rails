@@ -1,3 +1,3 @@
 class TodoItem < ApplicationRecord
-  belongs_to :todos
+  belongs_to :todo
 end

@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   get 'sessions/new'
   get 'users/new'
   get 'users/create'
-  resources :todos
+  resources :todos do
+    resources :todo_items
+  end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

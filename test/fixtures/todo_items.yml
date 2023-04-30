@@ -2,8 +2,8 @@
 
 one:
   content: MyString
-  todos: one
+  todo: one
 
 two:
   content: MyString
-  todos: two
+  todo: two
