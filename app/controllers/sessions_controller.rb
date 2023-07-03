@@ -4,15 +4,13 @@ class SessionsController < ApplicationController
   end
 
   def create
-    #look if user existe
-    @user = User.find_by(email: user_params[:email])
-
-    #session then
+    email = user_params[:email].downcase
+    @user = User.find_by(email: email)    
     if @user && @user.is_password?(user_params[:password])
         session[:user_id] = @user.id
         redirect_to todos_path
     else
-        flash.now[:notice] = "invalid Email or Password"
+        flash.now[:notice] = "Invalid Email or Password"
         render :new
     end
   end
